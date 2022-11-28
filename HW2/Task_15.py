@@ -1,5 +1,5 @@
-# 2 - Напишите программу, которая принимает на вход число N и выдает набор произведений (набор - это список) чисел от 1 до N.
-# Не используйте функцию math.factorial.
+# Напишите программу, которая принимает на вход число N
+#  и выдает набор произведений чисел от 1 до N.
 
 # Пример:
 # - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
@@ -12,12 +12,12 @@ def get_number(input_string):
         except ValueError:
             print("Вы ввели не число. Повторите ввод!")
             
-number = get_number("Введите целое число: ")
+N = get_number("Введите целое число: ")
 
-for i in range(number):
-    if i==0:
-        fact = [1]
-    else:
-        fact.append(fact[i-1]*(i+1))
-    
-print(f"{number}! = {fact}")
+result = []
+factorial = 1
+for i in range(1, N + 1):
+    factorial = factorial * i
+    result.append(factorial)
+
+print(f'Для N = {N}: {result}')
