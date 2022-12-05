@@ -46,4 +46,5 @@ list_gen()
 
 max, min = list_transform(spisok)
 
+
 print(f"В массиве {spisok} разница между максимальным {max} и минимальным {min} значением дробной части равна {max-min}")
